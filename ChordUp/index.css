@@ -16,7 +16,7 @@ h4 {
 }
 
 
-/* Animations */
+/* 
 @keyframes enter {
   from {
     top: 30px;
@@ -47,4 +47,4 @@ h4 {
   animation-timing-function: ease-in-out;
   animation-duration: 1s;
   transform-origin: 20% 0%;
-}
+}*/
