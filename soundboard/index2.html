@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Page with Buttons</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 py-20">
+    <div class="container mx-auto p-3">
+      <h1 class="text-3xl mb-8">Jeopardy</h1>
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 w-full h-32 md:h-auto md:rounded" >
+               📺 &nbsp; Intro
+            </button>
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 w-full h-32 md:h-auto md:rounded" >
+               ⏳ &nbsp; Waiting
+            </button>
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 w-full h-32 md:h-auto md:rounded">
+               ✅ &nbsp; Correct
+            </button>
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 w-full h-32 md:h-auto md:rounded">
+               ❌ &nbsp; Wrong
+            </button>
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 w-full h-32 md:h-auto md:rounded">
+               💰 &nbsp; Double
+            </button>
+            <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 w-full h-32 md:h-auto md:rounded">
+               Stop
+            </button>
+        </div>
+    </div>
+</body>
+</html>
