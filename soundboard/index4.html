@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <title>Asa's Soundboard</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
 
@@ -16,26 +17,35 @@
       const SOUND_BOARD = {
         Jeopardy: [
           {
-            file: "jp-intro.mp3",
+            file: "https://www.myinstants.com/media/sounds/jeopardy-intro.mp3",
             label: "📺 Intro",
           },
           {
-            file: "jp-wait.mp3",
-            label: "⏳ Wait",
+            file: "https://www.myinstants.com/media/sounds/jeopardy-outro-no-talking.mp3",
+            label: "🔚 Outro",
           },
           {
-            file: "jp-correct.mp3",
+            file: "https://www.myinstants.com/media/sounds/rightanswer.mp3",
             label: "✅ Correct",
           },
           {
-            file: "jp-incorrect.mp3",
+            file: "https://www.myinstants.com/media/sounds/times-up.mp3",
             label: "❌ Incorrect",
           },
           {
-            file: "jp-double.mp3",
+            file: "https://www.myinstants.com/media/sounds/jeopardy-board.mp3",
+            label: "🟦 Board Fill",
+          },
+          {
+            file: "https://www.myinstants.com/media/sounds/jeopardy-theme-lowq.mp3",
+            label: "⏳ Waiting",
+          },
+          {
+            file: "https://www.myinstants.com/media/sounds/jeopardy-daily-double.mp3",
             label: "💰 Double",
           },
           {
+            local: true,
             file: "stop",
             label: "Stop",
           },
@@ -43,8 +53,13 @@
       };
 
       function StopButton() {
+        function stopSounds() {
+          Howler.stop()
+        }
+
         return (
-          <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 w-full h-32 md:h-auto md:rounded"
+          <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 w-full h-32 md:h-auto
+          md:rounded" onClick={stopSounds}
           >
             Stop
           </button>
@@ -52,8 +67,19 @@
       }
 
       function SoundButton(props) {
+        const soundLocation = props.local ? `./sounds/${props.file}` :  props.file;
+        const sound = new Howl({
+          src: [soundLocation]
+        });
+
+        function playSound() {
+          Howler.stop()
+          sound.play();
+        }
+
         return (
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 w-full h-32 md:h-auto md:rounded"
+          <button key={props.file} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 w-full h-32 md:h-auto
+          md:rounded" onClick={playSound}
           >
             {props.label}
           </button>
@@ -65,7 +91,7 @@
           if (sound.file === 'stop') {
             return <StopButton />
           } else {
-            return <SoundButton key={sound.file} file={sound.file} label={sound.label} />
+            return <SoundButton file={sound.file} label={sound.label} local={sound.local} />
           }
         });
         return (
