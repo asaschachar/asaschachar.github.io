@@ -1,27 +1,25 @@
-const sounds = [
-  {
-    category: "Jeopardy",
-    sounds: [
-      {
-        id: "jp-intro",
-        label: "Intro",
-      },
-    ],
-  },
-];
+const sounds = {
+  Jeopardy: [
+    {
+      file: "jp-intro.mp3",
+      label: "📺 Intro",
+    },
+  ],
+};
 
-function registerButtons(sounds) {
-  for (let category of sounds) {
-    for (let button of category.sounds) {
-      console.log(button.id);
-    }
+function createSoundboard(soundList) {
+  for (const [category, sounds] of Object.entries(soundList)) {
+    let buttonList = sounds.map((sound) => {});
   }
 }
+
+createSoundboard(sounds);
 
 /**
  * Howler code
  */
 
+/*
 const mp3Sounds = [
   "1-st",
   "ahh",
@@ -142,4 +140,4 @@ jQuery(document).ready(function () {
       howlerList[jQuery(this).attr("id")].play();
     });
   }
-});
+});*/
