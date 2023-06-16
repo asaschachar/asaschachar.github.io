@@ -1,749 +1,130 @@
-
 <!DOCTYPE html>
-<!-- saved from url=(0040)http://www.realmofdarkness.net/sb/crowd/ -->
-<html lang="en-US" prefix="og: http://ogp.me/ns#"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-<meta name="viewport" content="initial-scale=1.0">
-<title>Asa's Soundboard - (forked from Dae-Ho's Soundboard)</title>
-<style type="text/css">
-img.wp-smiley,
-img.emoji {
-	display: inline !important;
-	border: none !important;
-	box-shadow: none !important;
-	height: 1em !important;
-	width: 1em !important;
-	margin: 0 .07em !important;
-	vertical-align: -0.1em !important;
-	background: none !important;
-	padding: 0 !important;
-}
-</style>
-
-<link rel="stylesheet" id="frontier-font-css" href="./files/css(1).css" type="text/css" media="all">
-<link rel="stylesheet" id="frontier-main-css" href="./files/style(1).css" type="text/css" media="all">
-<link rel="stylesheet" id="frontier-responsive-css" href="./files/responsive.css" type="text/css" media="all">
-
-<script type="text/javascript" src="./files/jquery.js"></script>
-
-<style type="text/css" media="screen">
-	#container 	{width: 1400px;}
-	#header 	{min-height: 0px;}
-	#content 	{width: 80%;}
-	#sidebar-left 	{width: 20%;}
-	#sidebar-right 	{width: 20%;}
-</style>
-
-<style type="text/css" media="screen">
-	.page-template-page-cs-php #content, .page-template-page-sc-php #content {width: 80%;}
-	.page-template-page-cs-php #sidebar-left, .page-template-page-sc-php #sidebar-left,
-	.page-template-page-cs-php #sidebar-right, .page-template-page-sc-php #sidebar-right {width: 20%;}
-	.page-template-page-scs-php #content {width: 50%;}
-	.page-template-page-scs-php #sidebar-left {width: 25%;}
-	.page-template-page-scs-php #sidebar-right {width: 25%;}
-</style>
-
-<style type="text/css" media="screen">
-	#header {background-color:#FFFFFF;}
-	#nav-main {background-color:#2A5A8E;}
-	#nav-main .nav-main {border-left: 1px solid #023266; border-right: 1px solid #4878ac;}
-	#nav-main .nav-main > li, #nav-main .nav-main > ul > .page_item {border-left: 1px solid #4878ac; border-right: 1px solid #023266;}
-	#top-bar {background-color:#222222;}
-	#bottom-bar {background-color:#222222;}
-	#main {background-color:#F5F5F5;}
-	.blog-view, .single-view, .author-info, .archive-info, .form-404 {background-color:#FFFFFF;}
-	.blog-view.sticky {background-color:#ffffff;}
-	.frontier-widget {background-color:#FFFFFF;}
-	.blog-view, .comment-author-admin > .comment-body, .bypostauthor > .comment-body {border-top: 6px solid #2A5A8E;}
-	.page-nav > *, .comment-nav > *, .author-info .title, .comment-reply-link, .widget-title,
-	.widget_search .search-submit, .widget_calendar caption {background-color:#2A5A8E;}
-	.genericon {color:#2A5A8E;}
-	a {color:#0E4D7A;}
-	a:hover {color:#0000EE;}
-</style>
-
-<!-- Custom Head Codes -->
-<link rel="stylesheet" href="./files/css(2).css">
-<script src="./files/howler.js"></script> 	
-<!-- Custom Head Codes End -->
-
-<link rel="icon" href="./files/icon-lg-50x50.png" sizes="32x32">
-<link rel="icon" href="./files/icon-lg-300x300.png" sizes="192x192">
-<link rel="apple-touch-icon-precomposed" href="./files/icon-lg-300x300.png">
-<meta name="msapplication-TileImage" content="./files/icon-lg-300x300.png">
-
-<!-- Custom CSS -->
-<style type="text/css" media="screen">
-/* Header */
-
-#search-3,
-#textblockswidget-6,
-#textblockswidget-11,
-#textblockswidget-12,
-#textblockswidget-13 {
-       float: right;
-}
-
-
-/* Headings */
-
-h1.entry-title {
-        display: none;
-}
-
-h2.title {
-	font-size: 1.5em;
-	line-height: 2em;
-	color: #f20d0d;
-}
-
-h3.widget-title {
-        margin: 0 1px;
-}
-
-
-/* Fonts */
-
-a:link {
-	text-decoration: none;
-}
-
-.strong {
-	font-weight: 600;
-}
-
-span#theme-link {
-       display: none;
-}
-
-
-/* Blocks */
-
-.sbcont {
-      text-align: center; 
-      max-width: 100%; 
-      position: relative;
-}
-
-.sbmain {
-      display: inline-block;
-      margin: 8px 15px;
-      padding: 6px;
-      width: 140px;
-      height: 200px;
-      text-align: center;
-      vertical-align: top;
-      cursor: pointer;
-}
-
-.sbmain a:link {
-      text-decoration: none;
-}
-
-@media (max-width: 767px) {
-      .sbmain {
-           margin: .5em;
-     }
-}
-
-.sbicon {
-      margin: 1em 2em;
-      cursor: pointer;
-}
-
-.sbicon-2 {
-      margin: 1.5em;
-      cursor: pointer;
-}
-
-.sbicon-3 {
-      margin: 1em;
-      cursor: pointer;
-}
-
-
-/* Search */
-
-.search-field {
-      border-radius: .25em;
-}
-
-.search-form .search-submit {
-      background: #2a5a8e;
-      color: #ffffff;
-      padding: 3px 5px;
-      border: none;
-      border-radius: .25em;
-}
-
-.search-form .search-submit:hover {
-      cursor: pointer;
-}
-
-.search-form .search-field {
-      background: #eeeeee;
-      margin: 4px 4px 4px 0;
-      padding: 4px;
-      border: 1px solid #555;
-      box-shadow: 0 0 2px #333 inset;
-}
-
-
-/* Posts */
-
-.entry-updated.updated, 
-.entry-author.author.vcard, 
-.genericon.genericon-day,
-.entry-comment-info,
-.continue-reading,
-.entry-tags {
-       display: none;
-}
-
-
-/* Images */
-
-.entry-thumbnail .post-thumbnail {
-	background: #ffffff;
-        border: none;
-}
-
-.sbth {
-       margin: 1em;
-       float: left;
-       cursor: pointer;
-}
-
-/* SB */
-
-.sb {
-       background: #000000;
-       display: inline-block;
-       padding: 1em 1em .5em;
-}
-
-.sb-2 {
-       background: #ffffff;
-       display: inline-block;
-       padding: 1em 1em .5em;
-}
-
-@media (max-width: 450px) {
-     .sb,
-     .sb-2 {
-          padding: 0;
-     }
-}
-
-.sb-title {
-      font-family: 'Open Sans' !important;
-      font-size: 1.7em;
-      font-weight: 600;
-      color: #ff6600;
-      margin: .1em .3em;
-}
-
-@media (max-width: 499px) {
-      .sb-title {
-           font-size: 1.4em;
-     }
-}
-
-.sb-header {
-      font-family: 'Open Sans' !important;
-      font-size: 1.2em;
-      font-weight: 600;
-      color: #ff6600;
-      margin: .1em .3em;
-}
-
-.sb-header-lg {
-      font-family: 'Open Sans' !important;
-      font-size: 1.4em;
-      font-weight: 600;
-      color: #ff6600;
-      margin: .1em .3em;
-}
-
-.sb-header-xl {
-      font-family: 'Open Sans' !important;
-      font-size: 1.6em;
-      font-weight: 600;
-      color: #ff6600;
-      margin: .1em .3em;
-}
-
-.sb-info {
-     font-family: 'Open Sans' !important;
-     color: #ffffff;
-     margin: .5em .6em;
-     font-size: 1em;
-}
-
-.sb-info a {
-     color: #0085ba;
-}
-
-.sb-info a:hover {
-     color: #006799;
-}
-
-.sb-info-sm {
-     font-family: 'Open Sans' !important;
-     color: #ffffff;
-     margin: .5em .3em;
-     font-size: 1em;
-}
-
-.sb-desc {
-     color: #ff6600;
-}
-
-.btn-1 {
-       font-family: 'Open Sans' !important;
-       display: inline-block;
-       cursor: pointer; 
-       text-decoration: none;
-       font-weight: 600;
-       box-shadow: rgb(84, 163, 247) 0px 1px 0px 0px inset; 
-       background: linear-gradient(rgb(0, 125, 193) 5%, rgb(0, 97, 167) 100%) rgb(0, 125, 193); 
-       border: 1px solid rgb(18, 77, 119); 
-       text-shadow: rgb(21, 70, 130) 0px 1px 0px;
-       border-radius: .25em;  
-       color: rgb(255, 255, 255); 
-       font-size: 15px; 
-       padding: .5em 1em; 
-       margin: .5em;
-}
-
-.btn-1:hover,
-.btn-md-1:hover,
-.btn-lg-1:hover,
-.btn-dg-1:hover,
-.btn-dg-2:hover,
-.btn-dg-3:hover,
-.btn-dg-4:hover,
-.btn-xl-1:hover {
-       background: linear-gradient(rgb(0, 125, 193) 5%, rgb(40, 128, 191) 100%) rgb(0, 125, 193);
-       border: 1px solid rgb(52, 113, 153);
-       text-shadow: rgb(45, 95, 156) 0px 1px 0px;
-}
-
-.btn-lg-1 {
-       font-family: 'Open Sans' !important;
-       display: inline-block;
-       cursor: pointer; 
-       text-decoration: none;
-       font-weight: 600;
-       box-shadow: rgb(84, 163, 247) 0px 1px 0px 0px inset; 
-       background: linear-gradient(rgb(0, 125, 193) 5%, rgb(0, 97, 167) 100%) rgb(0, 125, 193); 
-       border: 1px solid rgb(18, 77, 119); 
-       text-shadow: rgb(21, 70, 130) 0px 1px 0px;
-       border-radius: .25em;  
-       color: rgb(255, 255, 255); 
-       font-size: 20px; 
-       padding: .5em 1em; 
-       margin: .5em;
-}
-
-.btn-md-1 {
-       font-family: 'Open Sans' !important;
-       display: inline-block;
-       cursor: pointer; 
-       text-decoration: none;
-       font-weight: 600;
-       box-shadow: rgb(84, 163, 247) 0px 1px 0px 0px inset; 
-       background: linear-gradient(rgb(0, 125, 193) 5%, rgb(0, 97, 167) 100%) rgb(0, 125, 193); 
-       border: 1px solid rgb(18, 77, 119); 
-       text-shadow: rgb(21, 70, 130) 0px 1px 0px;
-       border-radius: .25em;  
-       color: rgb(255, 255, 255); 
-       font-size: 18px; 
-       padding: .5em 1em; 
-       margin: .5em;
-}
-
-.btn-dg-1 {
-       font-family: 'Open Sans' !important;
-       display: inline-block;
-       cursor: pointer; 
-       text-decoration: none;
-       font-weight: 600;
-       box-shadow: rgb(84, 163, 247) 0px 1px 0px 0px inset; 
-       background: linear-gradient(rgb(0, 125, 193) 5%, rgb(0, 97, 167) 100%) rgb(0, 125, 193); 
-       border: 1px solid rgb(18, 77, 119); 
-       text-shadow: rgb(21, 70, 130) 0px 1px 0px;
-       border-radius: .25em;  
-       color: rgb(255, 255, 255); 
-       font-size: 25px;
-       width: 4em; 
-       padding: .5em 1em; 
-       margin: .5em;
-}
-
-.btn-dg-2 {
-       font-family: 'Open Sans' !important;
-       display: inline-block;
-       cursor: pointer; 
-       text-decoration: none;
-       font-weight: 600;
-       box-shadow: rgb(84, 163, 247) 0px 1px 0px 0px inset; 
-       background: linear-gradient(rgb(0, 125, 193) 5%, rgb(0, 97, 167) 100%) rgb(0, 125, 193); 
-       border: 1px solid rgb(18, 77, 119); 
-       text-shadow: rgb(21, 70, 130) 0px 1px 0px;
-       border-radius: .25em;  
-       color: rgb(255, 255, 255); 
-       font-size: 18px;
-       width: 5em; 
-       padding: .5em 1em; 
-       margin: .5em;
-}
-
-.btn-dg-3 {
-       font-family: 'Open Sans' !important;
-       display: inline-block;
-       cursor: pointer; 
-       text-decoration: none;
-       font-weight: 600;
-       box-shadow: rgb(84, 163, 247) 0px 1px 0px 0px inset; 
-       background: linear-gradient(rgb(0, 125, 193) 5%, rgb(0, 97, 167) 100%) rgb(0, 125, 193); 
-       border: 1px solid rgb(18, 77, 119); 
-       text-shadow: rgb(21, 70, 130) 0px 1px 0px;
-       border-radius: .25em;  
-       color: rgb(255, 255, 255); 
-       font-size: 15px;
-       width: 5em; 
-       padding: .5em 1em; 
-       margin: .5em;
-}
-
-.btn-dg-4 {
-       font-family: 'Open Sans' !important;
-       display: inline-block;
-       cursor: pointer; 
-       text-decoration: none;
-       font-weight: 600;
-       box-shadow: rgb(84, 163, 247) 0px 1px 0px 0px inset; 
-       background: linear-gradient(rgb(0, 125, 193) 5%, rgb(0, 97, 167) 100%) rgb(0, 125, 193); 
-       border: 1px solid rgb(18, 77, 119); 
-       text-shadow: rgb(21, 70, 130) 0px 1px 0px;
-       border-radius: .25em;  
-       color: rgb(255, 255, 255); 
-       font-size: 20px;
-       width: 5em; 
-       padding: .5em 1em; 
-       margin: .5em;
-}
-
-.btn-xl-1 {
-       font-family: 'Open Sans' !important;
-       display: inline-block;
-       cursor: pointer; 
-       text-decoration: none;
-       font-weight: 600;
-       box-shadow: rgb(84, 163, 247) 0px 1px 0px 0px inset; 
-       background: linear-gradient(rgb(0, 125, 193) 5%, rgb(0, 97, 167) 100%) rgb(0, 125, 193); 
-       border: 1px solid rgb(18, 77, 119); 
-       text-shadow: rgb(21, 70, 130) 0px 1px 0px;
-       border-radius: .25em;  
-       color: rgb(255, 255, 255); 
-       font-size: 25px; 
-       padding: .5em 1em; 
-       margin: .5em;
-}
-
-.stop {
-       font-family: 'Open Sans' !important;
-       display: inline-block;
-       cursor: pointer; 
-       text-decoration: none;
-       font-weight: 600;
-       box-shadow: rgb(245, 86, 139) 0px 1px 0px 0px inset; 
-       background: linear-gradient(rgb(191, 0, 32) 5%, rgb(166, 0, 47) 100%) rgb(191, 0, 32); 
-       border-radius: .25em; 
-       border: 1px solid rgb(117, 19, 27); 
-       color: rgb(255, 255, 255); 
-       font-size: 15px; 
-       padding: .5em 1em; 
-       margin: .5em;
-       text-shadow: rgb(128, 22, 43) 0px 1px 0px;
-}
-
-.stop:hover,
-.stop-md:hover,
-.stop-lg:hover,
-.stop-xl:hover {
-       background: linear-gradient(rgb(219, 46, 69) 5%, rgb(209, 42, 56) 100%) rgb(219, 46, 69); 
-       border-radius: .25em;
-       border: 1px solid rgb(189, 24, 24); 
-       text-shadow: rgb(163, 31, 42) 0px 1px 0px;
-}
-
-.stop-md {
-       font-family: 'Open Sans' !important;
-       display: inline-block;
-       cursor: pointer; 
-       text-decoration: none;
-       font-weight: 600;
-       box-shadow: rgb(245, 86, 139) 0px 1px 0px 0px inset; 
-       background: linear-gradient(rgb(191, 0, 32) 5%, rgb(166, 0, 47) 100%) rgb(191, 0, 32); 
-       border-radius: .25em; 
-       border: 1px solid rgb(117, 19, 27); 
-       color: rgb(255, 255, 255); 
-       font-size: 18px; 
-       padding: .5em 1em; 
-       margin: .5em;
-       text-shadow: rgb(128, 22, 43) 0px 1px 0px;
-}
-
-.stop-lg {
-       font-family: 'Open Sans' !important;
-       display: inline-block;
-       cursor: pointer; 
-       text-decoration: none;
-       font-weight: 600;
-       box-shadow: rgb(245, 86, 139) 0px 1px 0px 0px inset; 
-       background: linear-gradient(rgb(191, 0, 32) 5%, rgb(166, 0, 47) 100%) rgb(191, 0, 32); 
-       border-radius: .25em; 
-       border: 1px solid rgb(117, 19, 27); 
-       color: rgb(255, 255, 255); 
-       font-size: 20px; 
-       padding: .5em 1em; 
-       margin: .5em;
-       text-shadow: rgb(128, 22, 43) 0px 1px 0px;
-}
-
-.stop-lg-2 {
-       font-family: 'Open Sans' !important;
-       display: inline-block;
-       cursor: pointer; 
-       text-decoration: none;
-       font-weight: 600;
-       box-shadow: rgb(84, 163, 247) 0px 1px 0px 0px inset; 
-       background: linear-gradient(rgb(0, 125, 193) 5%, rgb(40, 128, 191) 100%) rgb(0, 125, 193);
-       border-radius: .25em;  
-       border: 1px solid rgb(52, 113, 153);
-       color: rgb(255, 255, 255); 
-       font-size: 20px; 
-       padding: .5em 1em; 
-       margin: .5em;
-       text-shadow: rgb(45, 95, 156) 0px 1px 0px;
-}
-
-.stop-lg-2:hover {
-       background: linear-gradient(rgb(0, 125, 193) 5%, rgb(0, 97, 167) 100%) rgb(0, 125, 193); 
-       border: 1px solid rgb(18, 77, 119); 
-       text-shadow: rgb(21, 70, 130) 0px 1px 0px;
-}
-
-.stop-xl {
-       font-family: 'Open Sans' !important;
-       display: inline-block;
-       cursor: pointer; 
-       text-decoration: none;
-       font-weight: 600;
-       box-shadow: rgb(245, 86, 139) 0px 1px 0px 0px inset; 
-       background: linear-gradient(rgb(191, 0, 32) 5%, rgb(166, 0, 47) 100%) rgb(191, 0, 32); 
-       border-radius: .25em; 
-       border: 1px solid rgb(117, 19, 27); 
-       color: rgb(255, 255, 255); 
-       font-size: 25px; 
-       padding: .5em 1em; 
-       margin: .5em;
-       text-shadow: rgb(128, 22, 43) 0px 1px 0px;
-}
-
-.pg-1 {
-       font-family: 'Open Sans' !important;
-       display: inline-block;
-       cursor: pointer; 
-       text-decoration: none;
-       font-weight: 600;
-       box-shadow: rgb(207, 134, 108) 0px 1px 0px 0px inset; 
-       background: linear-gradient(rgb(208, 69, 27) 5%, rgb(188, 51, 21) 100%) rgb(208, 69, 27); 
-       border-radius: .25em; 
-       border: 1px solid rgb(148, 41, 17); 
-       color: rgb(255, 255, 255); 
-       font-size: 15px; padding: 6px 24px; 
-       padding: .5em 1em; 
-       margin: .5em;
-       text-shadow: rgb(133, 70, 41) 0px 1px 0px;
-}
-
-.pg-1:hover {
-      background: linear-gradient(rgb(235, 95, 56) 5%, rgb(188, 51, 21) 100%) rgb(235, 95, 56); 
-}
-
-.btn-2 {
-       font-family: 'Open Sans' !important;
-       display: inline-block;
-       cursor: pointer; 
-       text-decoration: none;
-       font-weight: 600;
-       box-shadow: rgb(207, 134, 108) 0px 1px 0px 0px inset; 
-       background: linear-gradient(rgb(208, 69, 27) 5%, rgb(188, 51, 21) 100%) rgb(208, 69, 27); 
-       border: 1px solid rgb(148, 41, 17); 
-       color: rgb(255, 255, 255); 
-       border-radius: .25em;  
-       font-size: 15px; 
-       padding: .5em 1em; 
-       margin: .5em;
-}
-
-.btn-2:hover,
-.btn-2-md:hover,
-.btn-2-lg:hover,
-.btn-2-xl:hover {
-      background: linear-gradient(rgb(235, 95, 56) 5%, rgb(188, 51, 21) 100%) rgb(235, 95, 56); 
-}
-
-.btn-2-md {
-       font-family: 'Open Sans' !important;
-       display: inline-block;
-       cursor: pointer; 
-       text-decoration: none;
-       font-weight: 600;
-       box-shadow: rgb(207, 134, 108) 0px 1px 0px 0px inset; 
-       background: linear-gradient(rgb(208, 69, 27) 5%, rgb(188, 51, 21) 100%) rgb(208, 69, 27); 
-       border-radius: .25em; 
-       border: 1px solid rgb(148, 41, 17); 
-       color: rgb(255, 255, 255); 
-       font-size: 18px;
-       padding: .5em 1em; 
-       margin: .5em;
-       text-shadow: rgb(133, 70, 41) 0px 1px 0px;
-}
-
-.btn-2-lg {
-       font-family: 'Open Sans' !important;
-       display: inline-block;
-       cursor: pointer; 
-       text-decoration: none;
-       font-weight: 600;
-       box-shadow: rgb(207, 134, 108) 0px 1px 0px 0px inset; 
-       background: linear-gradient(rgb(208, 69, 27) 5%, rgb(188, 51, 21) 100%) rgb(208, 69, 27); 
-       border-radius: .25em; 
-       border: 1px solid rgb(148, 41, 17); 
-       color: rgb(255, 255, 255); 
-       font-size: 20px;
-       padding: .5em 1em; 
-       margin: .5em;
-       text-shadow: rgb(133, 70, 41) 0px 1px 0px;
-}
-
-.btn-2-xl {
-       font-family: 'Open Sans' !important;
-       display: inline-block;
-       cursor: pointer; 
-       text-decoration: none;
-       font-weight: 600;
-       box-shadow: rgb(207, 134, 108) 0px 1px 0px 0px inset; 
-       background: linear-gradient(rgb(208, 69, 27) 5%, rgb(188, 51, 21) 100%) rgb(208, 69, 27); 
-       border-radius: .25em; 
-       border: 1px solid rgb(148, 41, 17); 
-       color: rgb(255, 255, 255); 
-       font-size: 25px;
-       padding: .5em 1em; 
-       margin: .5em;
-       text-shadow: rgb(133, 70, 41) 0px 1px 0px;
-}
-</style>
-<!-- Custom CSS End -->
-</head>
-
-<body class="post-template-default single single-post postid-3227 single-format-standard custom-background" style="visibility: visible;" cz-shortcut-listen="true">	
-	
-<div id="container" class="cf" style="height: auto !important;">
-	<div id="top-bar" class="cf">		
-		<div id="top-bar-info">
-			<h4 id="site-description">Dae-Ho's Audience Soundboard!!!</h4>
-		</div>
-	</div>
-	
-	<div id="main" class="col-sc cf" style="height: auto !important;">
-		<div class="entry-content cf" itemprop="text" style="height: auto !important;">
-			<div class="sb">
-				<h4 class="sb-title">Audience Reaction Soundboard</h4>
-				<button class="btn-md-1" id="clap">Clapping</button>
-				<button class="btn-md-1" id="clap-3">Clapping 2</button>
-				<button class="btn-md-1" id="clap-2">Clapping 3</button>
-				<button class="btn-md-1" id="clap-long">Clapping Long</button>
-				<button class="btn-md-1" id="clap-long-2">Clapping Long 2</button>
-				<button class="btn-md-1" id="clap-loud">Clapping Loud</button>
-				<button class="btn-md-1" id="clap-cheer">Clapping &amp; Cheering</button>
-				<button class="btn-md-1" id="clap-cheer-2">Clapping &amp; Cheering 2</button>
-				<button class="btn-md-1" id="clap-short">Clapping Short</button>
-				<button class="btn-md-1" id="clap-short-2">Clapping Short 2</button>
-				<button class="btn-md-1" id="clap-short-3">Clapping Short 3</button>
-				<button class="btn-md-1" id="clap-slow">Clapping Slow</button>
-				<button class="btn-md-1" id="clap-slow-2">Clapping Slow 2</button>
-				<button class="btn-md-1" id="cheer-clap">Cheering</button>
-				<button class="btn-md-1" id="cheer-clap-2">Cheering 2</button>
-				<button class="btn-md-1" id="countdown">Countdown</button>
-				<button class="btn-md-1" id="yay">Yay!!!</button>
-				<button class="btn-md-1" id="laugh">Laughing</button>
-				<button class="btn-md-1" id="laugh-2">Laughing 2</button>
-				<button class="stop-md" id="1-st">Stop Sounds</button>
-				<button class="btn-md-1" id="laugh-3">Laughing 3</button>
-				<button class="btn-md-1" id="laugh-4">Laughing 4</button>
-				<button class="btn-md-1" id="laugh-long">Laughing Long</button>
-				<button class="btn-md-1" id="laugh-long-2">Laughing Long 2</button>
-				<button class="btn-md-1" id="drum">Drumroll</button>
-				<button class="btn-md-1" id="ahh">Ahh</button>
-				<button class="btn-md-1" id="aww">Aww</button>
-				<button class="btn-md-1" id="aww-2">Aww Long</button>
-				<button class="btn-md-1" id="ohh">Oohh</button>
-				<button class="btn-md-1" id="booing">Booing</button>
-				<button class="btn-md-1" id="booing-2">Booing 2</button>
-				<button class="btn-md-1" id="booing-3">Booing 3</button>
-				<button class="btn-md-1" id="angry">Angry</button>
-				<button class="btn-md-1" id="angry-2">Angry 2</button>
-				<button class="btn-md-1" id="angry-3">Angry 3</button>
-                        <button class="btn-md-1" id="24countdown">24 Timer</button>
-                        <button class="btn-md-1" id="airhorn">Air Horn</button>
-                        <button class="btn-md-1" id="bulls">Bulls Intro Song</button>
-                        <button class="btn-md-1" id="jeopardy2020">Jeopardy</button>
-                        <button class="btn-md-1" id="waiting">Waiting!</button>
-                        <button class="btn-md-1" id="badumtssA2">Drum Joke</button>
-                        <button class="btn-md-1" id="trombone">Sad Trombone</button>
-
-                        <h4 class="sb-title">Who Wants to be a Millionaire Soundboard</h4>
-                        <button class="btn-md-1" id="wwtbam-main-theme">Main Theme</button>
-                        <button class="btn-md-1" id="wwtbam-commerical-break">Commercial</button>
-                        <button class="btn-md-1" id="wwtbam-lets-play">Let's Play</button>
-                        <button class="btn-md-1" id="wwtbam-final-answer">Final Answer</button>
-                        <button class="btn-md-1" id="wwtbam-correct-answer">Correct</button>
-                        <button class="btn-md-1" id="wwtbam-wrong-answer">Wrong</button>
-                        <button class="btn-md-1" id="wwtbam-1-100-1000-music">100-1,000</button>
-                        <button class="btn-md-1" id="wwtbam-2-2000-32000">2,000-32,000</button>
-                        <button class="btn-md-1" id="wwtbam-3-64000-music">64,000</button>
-                        <button class="btn-md-1" id="wwtbam-4-250000-music">250,000</button>
-                        <button class="btn-md-1" id="wwtbam-5-500000-music">500,000</button>
-                        <button class="btn-md-1" id="wwtbam-6-1000000-music">1,000,000</button>
-                        <button class="btn-md-1" id="wwtbam-phone-a-friend">Phone A Friend</button>
-                        <button class="btn-md-1" id="wwtbam-poll">Poll Audience</button>
-                        <h4 class="sb-title">Family Feud Soundboard</h4>
-                        <button class="btn-md-1" id="ff-theme-song">Theme Song</button>
-                        <button class="btn-md-1" id="ff-walk-up">Walk Up (Face-Off)</button>
-                        <button class="btn-md-1" id="ff-ring-in">Ring In (Face-Off)</button>
-                        <button class="btn-md-1" id="ff-correct">Correct</button>
-                        <button class="btn-md-1" id="ff-strike">Strike</button>
-                        <button class="btn-md-1" id="ff-after-steal">After Steal</button>
-			</div>
-
-			<script src="./files/sb.js"></script>
-		</div>
-	</div>
-</div>
-
-<script>
-	jQuery(document).ready(function() 
-	{
-		jQuery(":button").focus(function() 
-		{
-			this.blur();
-		});
-	});
-</script>
-</body>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asa's Soundboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      const SOUND_BOARD = {
+        Jeopardy: [
+          {
+            file: "https://www.myinstants.com/media/sounds/jeopardy-intro.mp3",
+            label: "📺 Intro",
+          },
+          {
+            file: "https://www.myinstants.com/media/sounds/jeopardy-outro-no-talking.mp3",
+            label: "🔚 Outro",
+          },
+          {
+            file: "https://www.myinstants.com/media/sounds/rightanswer.mp3",
+            label: "✅ Correct",
+          },
+          {
+            file: "https://www.myinstants.com/media/sounds/times-up.mp3",
+            label: "❌ Incorrect",
+          },
+          {
+            file: "https://www.myinstants.com/media/sounds/jeopardy-board.mp3",
+            label: "🟦 Board Fill",
+          },
+          {
+            file: "https://www.myinstants.com/media/sounds/jeopardy-theme-lowq.mp3",
+            label: "⏳ Waiting",
+          },
+          {
+            file: "https://www.myinstants.com/media/sounds/jeopardy-daily-double.mp3",
+            label: "💰 Double",
+          },
+          {
+            local: true,
+            file: "stop",
+            label: "Stop",
+          },
+        ],
+      };
+
+      function StopButton() {
+        function stopSounds() {
+          Howler.stop()
+        }
+
+        return (
+          <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 w-full h-32 md:h-auto
+          md:rounded" onClick={stopSounds}
+          >
+            Stop
+          </button>
+        )
+      }
+
+      function SoundButton(props) {
+        const soundLocation = props.local ? `./sounds/${props.file}` :  props.file;
+        const sound = new Howl({
+          src: [soundLocation]
+        });
+
+        function playSound() {
+          Howler.stop()
+          sound.play();
+        }
+
+        return (
+          <button key={props.file} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 w-full h-32 md:h-auto
+          md:rounded" onClick={playSound}
+          >
+            {props.label}
+          </button>
+        )
+      }
+
+      function Category(props) {
+        const buttonList = props.sounds.map((sound) => {
+          if (sound.file === 'stop') {
+            return <StopButton />
+          } else {
+            return <SoundButton file={sound.file} label={sound.label} local={sound.local} />
+          }
+        });
+        return (
+          <div className="container mx-auto p-3">
+            <h1 className="text-3xl mb-8">{props.categoryName}</h1>
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+              { buttonList }
+            </div>
+          </div>
+        )
+      }
+
+      function Soundboard() {
+        return Object.keys(SOUND_BOARD).map((key) => (
+          <Category categoryName={key} sounds={SOUND_BOARD[key]} />
+        ));
+      }
+
+      const container = document.getElementById('root');
+      const root = ReactDOM.createRoot(container);
+      root.render(<Soundboard />);
+
+    </script>
+    <!--
+      Note: this page is a great way to try React but it's not suitable for production.
+      It slowly compiles JSX with Babel in the browser and uses a large development build of React.
+
+      Read this page for starting a new React project with JSX:
+      https://react.dev/learn/start-a-new-react-project
+
+      Read this page for adding React with JSX to an existing project:
+      https://react.dev/learn/add-react-to-an-existing-project
+    -->
+  </body>
 </html>
