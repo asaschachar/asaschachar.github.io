@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asa's Soundboard</title>
+    <title>Asa Soundboard</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100
+      100%22><text y=%22.9em%22 font-size=%2290%22>🎙</text></svg>">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
@@ -11,9 +13,18 @@
 
     <!-- Don't use this in production: -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+      button:active {
+        opacity: 0.5;
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
+    <div id="alternates" class="text-gray-300 flex justify-center">
+      <a href="http://night-pimp.com/soundboard/" class="px-2">Dae-Ho's</a> ·
+      <a href="https://www.myinstants.com/" class="px-2">MyInstants</a>
+    </div>
     <script type="text/babel">
       const SOUND_BOARD = {
         Jeopardy: [
