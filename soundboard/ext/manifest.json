@@ -1,0 +1,52 @@
+{
+  "name": "Jeopardy Soundboard",
+  "description": "A series of keyboard shortcuts enabling Jeopardy sounds",
+  "version": "1.0",
+  "manifest_version": 3,
+  "minimum_chrome_version": "92",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "jeopardy": {
+      "suggested_key": {
+        "default": "Ctrl+J",
+        "mac": "MacCtrl+J"
+      },
+      "description": "Jeopardy sound"
+    },
+    "right": {
+      "suggested_key": {
+        "default": "Ctrl+R",
+        "mac": "MacCtrl+R"
+      },
+      "description": "Right answer sound"
+    },
+    "wrong": {
+      "suggested_key": {
+        "default": "Ctrl+W",
+        "mac": "MacCtrl+W"
+      },
+      "description": "Wrong answer sound"
+    },
+    "stop": {
+      "suggested_key": {
+        "default": "Ctrl+S",
+        "mac": "MacCtrl+S"
+      },
+      "description": "Stop all sounds"
+    },
+    "intro": {
+      "description": "Intro sound"
+    },
+    "double": {
+      "description": "Daily double sound"
+    },
+    "outro": {
+      "description": "Outro sound"
+    },
+    "board": {
+      "description": "Board sound"
+    }
+  }
+}
