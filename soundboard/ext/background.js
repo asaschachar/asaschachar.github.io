@@ -1,16 +1,38 @@
-importScripts("./lib/howler.js");
-
 chrome.runtime.onStartup.addListener(() => {
   console.log(`[Jeopardy] Extension starting...`);
 });
 
+/**
+ * Plays audio files from extension service workers
+ * @param {string} source - path of the audio file
+ * @param {number} volume - volume of the playback
+ */
+async function playSound(source = "default.wav", volume = 1) {
+  await createOffscreen();
+  await chrome.runtime.sendMessage({ play: { source, volume } });
+}
+
+async function stopSound() {
+  await createOffscreen();
+  await chrome.runtime.sendMessage({ stop: true });
+}
+
+/**
+ * Create the offscreen document if it doesn't already exist
+ */
+async function createOffscreen() {
+  if (await chrome.offscreen.hasDocument()) return;
+  await chrome.offscreen.createDocument({
+    url: "offscreen.html",
+    reasons: ["AUDIO_PLAYBACK"],
+    justification: "Playing sound for soundboard",
+  });
+}
+
 chrome.commands.onCommand.addListener(function (command) {
   function soundFn(src) {
-    const sound = new Howl({
-      src: [src],
-    });
     return function () {
-      sound.play();
+      playSound(src);
     };
   }
 
@@ -48,7 +70,7 @@ chrome.commands.onCommand.addListener(function (command) {
       ),
     },
     stop: {
-      exec: Howler.stop,
+      exec: stopSound,
     },
   };
 
@@ -61,8 +83,3 @@ chrome.commands.onCommand.addListener(function (command) {
     );
   }
 });
-
-function savePage() {
-  // Replace this with your desired code logic for saving the page
-  console.log("Page saved!");
-}

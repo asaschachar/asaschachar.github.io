@@ -3,6 +3,7 @@
   "description": "A series of keyboard shortcuts enabling Jeopardy sounds",
   "version": "1.0",
   "manifest_version": 3,
+  "permissions": ["offscreen"],
   "minimum_chrome_version": "92",
   "background": {
     "service_worker": "background.js"
