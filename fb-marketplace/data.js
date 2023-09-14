@@ -141,25 +141,29 @@ var DEFAULT_ITEMS = [
   },
 ];
 
+var STEP1 = [
+  {
+    id: 9.5,
+    name: "Ferrari",
+    price: "Free!",
+    location: "Have to locate!",
+    url: "https://scontent-sea1-1.xx.fbcdn.net/v/t45.5328-4/376319154_6310883455701827_4946536621301224490_n.jpg?stp=c90.0.540.540a_dst-jpg_p180x540&_nc_cat=110&ccb=1-7&_nc_sid=1a0e84&_nc_ohc=-B_Gpas5CyIAX-1sGnl&_nc_ht=scontent-sea1-1.xx&oh=00_AfB6Jogkt2hGGlFmN1t4DIm31gtkBK9TRXxqpbWNS5GiEg&oe=65080D71",
+  },
+];
+
+var STEP2 = [
+  {
+    id: 16.5,
+    name: "Ferrari",
+    price: "Free!",
+    location: "Have to locate!",
+    url: "https://scontent-sea1-1.xx.fbcdn.net/v/t45.5328-4/376319154_6310883455701827_4946536621301224490_n.jpg?stp=c90.0.540.540a_dst-jpg_p180x540&_nc_cat=110&ccb=1-7&_nc_sid=1a0e84&_nc_ohc=-B_Gpas5CyIAX-1sGnl&_nc_ht=scontent-sea1-1.xx&oh=00_AfB6Jogkt2hGGlFmN1t4DIm31gtkBK9TRXxqpbWNS5GiEg&oe=65080D71",
+  },
+];
+
 var MARKETPLACE = {
-  0: [
-    {
-      id: 9,
-      name: "Ferrari",
-      price: "Free!",
-      location: "Have to locate!",
-      url: "https://scontent-sea1-1.xx.fbcdn.net/v/t45.5328-4/376319154_6310883455701827_4946536621301224490_n.jpg?stp=c90.0.540.540a_dst-jpg_p180x540&_nc_cat=110&ccb=1-7&_nc_sid=1a0e84&_nc_ohc=-B_Gpas5CyIAX-1sGnl&_nc_ht=scontent-sea1-1.xx&oh=00_AfB6Jogkt2hGGlFmN1t4DIm31gtkBK9TRXxqpbWNS5GiEg&oe=65080D71",
-    },
-    ...DEFAULT_ITEMS,
-  ],
-  1: [
-    {
-      id: 16,
-      name: "Ferrari",
-      price: "Free!",
-      location: "Have to locate!",
-      url: "https://scontent-sea1-1.xx.fbcdn.net/v/t45.5328-4/376319154_6310883455701827_4946536621301224490_n.jpg?stp=c90.0.540.540a_dst-jpg_p180x540&_nc_cat=110&ccb=1-7&_nc_sid=1a0e84&_nc_ohc=-B_Gpas5CyIAX-1sGnl&_nc_ht=scontent-sea1-1.xx&oh=00_AfB6Jogkt2hGGlFmN1t4DIm31gtkBK9TRXxqpbWNS5GiEg&oe=65080D71",
-    },
-    ...DEFAULT_ITEMS,
-  ],
+  0: [...STEP1, ...DEFAULT_ITEMS],
+  1: [...STEP2, ...DEFAULT_ITEMS],
 };
+
+var ALL_ITEMS = [...STEP1, ...STEP2, ...DEFAULT_ITEMS];
