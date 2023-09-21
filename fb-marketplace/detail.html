@@ -13,6 +13,7 @@
 
     <!-- Don't use this in production: -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.7.6/dist/full.css" rel="stylesheet" type="text/css" />
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="./data.js" type="text/javascript"></script>
@@ -74,9 +75,26 @@
 
       function Item(props) {
         let data = props.data
+        let numImages = props.data.images.length
+        let detailImages = props.data.images.slice(1);
+
+        let carouselContent = numImages > 1 ? (detailImages.map((url, i) => (
+          <div key={'slide'+i} id={'slide'+i} className="carousel-item relative w-full">
+            <img src={url} className="w-full" />
+            <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+              <a href={'#slide'+((i+1)%numImages)} className="btn btn-circle">❮</a>
+              <a href={'#slide'+(i-1 < 0 ? numImages-1: i-1)} className="btn btn-circle">❯</a>
+            </div>
+          </div>
+          ))) : (
+            <img src={data.images[0]} className="w-full" />
+          )
+
         return (
           <div key={data.id} className="cursor-pointer">
-            <img className="rounded-lg" src={data.url} />
+            <div className="carousel w-full">
+              { carouselContent}
+            </div>
             <div className="flex justify-left flex-col mt-3">
               <div className="text-md text-black font-semibold">{data.price}</div>
               <div className="text-black">{data.name}</div>
