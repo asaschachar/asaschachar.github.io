@@ -38,7 +38,7 @@ var DEFAULT_ITEMS = [
   {
     id: 4,
     name: "Cake",
-    price: "$30",
+    price: "$33",
     location: "At neighbor's place",
     images: [`${URL_PATH}/mk-cake.jpeg`, `${URL_PATH}/cake.jpeg`],
     msg: "We haven't made your favorite molten chocolate cake in the rose bundt pan yet. I guess we should get it out of the store heading into winter so we can host more dinners and eat more desserts. Thanks for being the one in our relationship who makes sure everyone (even my family and friends) are well-fed, satisfied, and happy",
