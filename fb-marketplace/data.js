@@ -232,7 +232,7 @@ var STEP2 = [
     price: "Free!",
     location: "Somewhere close-by!",
     images: [`${URL_PATH}/mk-beeer.jpeg`],
-    clue: "Congrats on claiming your first free item on the marketplace! Use this clue to locate it: Where the bump, set, and spike unite, In a bag, snug and not in plain sight. A sport of sandy courts and nets above, In this gear bag, you'll find what you're thinking of.",
+    clue: "Congrats on claiming your second free item on the marketplace! Use this clue to locate it: Where the bump, set, and spike unite, In a bag, snug and not in plain sight. A sport of sandy courts and nets above, In this gear bag, you'll find what you're thinking of.",
     msg: "I love our new found joy in non-alcoholism. Would you like to join me in creating a new social club for NAA?",
   },
 ];
@@ -266,7 +266,7 @@ var STEP4 = [
     location: "Where our net goes",
     images: [`${URL_PATH}/mk-pickleball.jpeg`, `${URL_PATH}/pickleball.jpeg`],
     clue: "Congrats, you've found another free item! To find it, use this clue: Shield your eyes from the blazing day, where UV rays in vibrant play. Within this chamber of windows wide, where sunny smiles tend to hide.",
-    msg: "",
+    msg: "Thanks for bringing pickleball to all of our lives and every home you visit 🥰",
     // Pickleball lessons
     // https://anc.apm.activecommunities.com/seattle/createaccount?onlineSiteId=0
   },
