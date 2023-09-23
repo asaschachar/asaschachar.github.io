@@ -48,7 +48,11 @@ var DEFAULT_ITEMS = [
     name: "Sounder's Tickets",
     price: "$185",
     location: "In the mail",
-    images: [`${URL_PATH}/mk-sounders.jpeg`, `${URL_PATH}/soccer-tickets.png`],
+    images: [
+      `${URL_PATH}/mk-sounders.jpeg`,
+      `${URL_PATH}/soccer-tickets.png`,
+      `${URL_PATH}/soccer-group.jpg`,
+    ],
     msg: "Referee sir! Remember how I got the good food and you and Eli got not so great burgers? Who would have guessed that my hot dog craving was spot on. Semi-related, I'm still impressed about how knowledgeable you are about baseball",
   },
   {
