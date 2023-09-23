@@ -87,7 +87,7 @@ var DEFAULT_ITEMS = [
     id: 9,
     name: "Motel Stay",
     price: "$145",
-    location: "On Aurora",
+    location: "In Seattle",
     images: [
       `${URL_PATH}/mk-motel.jpeg`,
       `${URL_PATH}/motel-job.jpeg`,
