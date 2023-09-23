@@ -221,29 +221,29 @@ var STEP1 = [
     price: "Free!",
     location: "Somewhere outside the house",
     images: [`${URL_PATH}/doordash.jpeg`],
-    clue: "",
-    msg: "Congrats on claiming your first free item on the marketplace! Use the picture to collect it! Also, thanks for loving me even though I'm an 'eat-to-live' kind of person. In our next year in Seattle, I'll continue to return the favor by scheduling dates to the places you want to try like this one!",
+    clue: "Congrats on claiming your first free item on the marketplace! Use this clue to locate it: In the realm of four-wheel dreams, where gears and pedals orchestrate the schemes. Behind glass and beneath the sun's hot regard, you'll find the place to drive forward.",
+    msg: "Also, thanks for loving me even though I'm an 'eat-to-live' kind of person. In our next year in Seattle, I'll continue to return the favor by scheduling dates to the places you want to try like this one!",
   },
 ];
 
 var STEP2 = [
   {
     id: 9.5,
-    name: "Non-alcoholic Beer",
+    name: "Refreshing Drinks",
     price: "Free!",
     location: "Somewhere close-by!",
     images: [`${URL_PATH}/mk-beeer.jpeg`],
-    clue: "",
-    msg: "Congrats, you've claimed your second free item! Good luck locating your ",
+    clue: "Congrats on claiming your first free item on the marketplace! Use this clue to locate it: Where the bump, set, and spike unite, In a bag, snug and not in plain sight. A sport of sandy courts and nets above, In this gear bag, you'll find what you're thinking of.",
+    msg: "I love our new found joy in non-alcoholism. Would you like to join me in creating a new social club for NAA?",
   },
 ];
 
 var STEP3 = [
   {
     id: 14.5,
-    name: "Fancy Dinner",
+    name: "Fun food",
     price: "Free!",
-    location: "Glove Compartment",
+    location: "Eli might take us here",
     images: [
       `${URL_PATH}/mk-fancy-meal.jpeg`,
       `${URL_PATH}/nice-meal.jpeg`,
@@ -254,20 +254,20 @@ var STEP3 = [
       `${URL_PATH}/farm-to-table-dinner.jpeg`,
       `${URL_PATH}/chinese-food.jpeg`,
     ],
-    clue: "",
-    msg: `Congrats on finding your second free item! Use the picture to figure out our next activity! Also, Thanks for loving me even though I'm an 'eat-to-live' kind of person. In our next year in Seattle, I'll continue to return the favor by scheduling dates to the places you want to try like this one!`,
+    clue: "Congrats on finding your third free item! Where comfort meets mystery, beneath your feet, A hidden clue awaits, where two worlds meet. Lift the veil where secrets discreetly rest, Beneath it, your next hint is the best.",
+    msg: `Also, Thanks for loving me even though I'm an 'eat-to-live' kind of person. In our next year in Seattle, I'll continue to return the favor by scheduling dates to the places you want to try like this one!`,
   },
 ];
 
 var STEP4 = [
   {
     id: 16.5,
-    name: "Pickleball with Family",
+    name: "Pickleball",
     price: "Free!",
-    location: "Parent's House",
+    location: "Where our net goes",
     images: [`${URL_PATH}/mk-pickleball.jpeg`, `${URL_PATH}/pickleball.jpeg`],
-    clue: "",
-    msg: "Congrats, you've found your first free item! Use the picture as a clue to where to find our first activity!",
+    clue: "Congrats, you've found another free item! To find it, use this clue: Shield your eyes from the blazing day, where UV rays in vibrant play. Within this chamber of windows wide, where sunny smiles tend to hide.",
+    msg: "",
     // Pickleball lessons
     // https://anc.apm.activecommunities.com/seattle/createaccount?onlineSiteId=0
   },
