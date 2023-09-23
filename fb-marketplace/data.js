@@ -87,7 +87,6 @@ var DEFAULT_ITEMS = [
     images: [
       `${URL_PATH}/mk-motel.jpeg`,
       `${URL_PATH}/motel-job.jpeg`,
-      `${URL_PATH}/motel.jpeg`,
       `${URL_PATH}/laundry.png`,
     ],
     msg: "My little laundry soldier is all grown up! She's running not only one but two whole businesses that both run 24/7 ?! I'm so proud of what you've been able to accomplish and I'm inspired by how you've been able to navigate so many challenging scenarios along the way. I hope you're finding the work rewarding and I hope I can continue to support you even if it means just sleeping in the back-office ❤️ ",
