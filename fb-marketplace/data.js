@@ -85,11 +85,11 @@ var DEFAULT_ITEMS = [
   },
   {
     id: 9,
-    name: "Motel Stay",
+    name: "Hotel Stay",
     price: "$145",
     location: "In Seattle",
     images: [
-      `${URL_PATH}/mk-motel.jpeg`,
+      `${URL_PATH}/mk-hotel.webp`,
       `${URL_PATH}/motel-job.jpeg`,
       `${URL_PATH}/laundry.png`,
     ],
