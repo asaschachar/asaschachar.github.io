@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracker</title>
+
+    <!-- Include Tailwind CSS CDN -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="./data.js" type="text/javascript"></script>
+    <style>
+        /* Custom CSS */
+    </style>
+  </head>
+  <body>
+    <div id="root" class=""></div>
+    <script type="text/babel">
+
+      const TRANSFER_DATE = new Date("2023/10/02");
+      const LAST_PERIOD_DATE = new Date("2023/09/15");
+      const DUE_DATE = new Date("2024/06/22");
+
+      function fnDaysSince(pastDate, endDate) {
+        // Get the current date
+        const currentDate = endDate || new Date();
+
+        // Calculate the time difference in milliseconds
+        const timeDifference = currentDate - pastDate;
+
+        // Calculate the number of days
+        return Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+      }
+
+      function getStageIndex(day, data) {
+        return data.findIndex((stg) => day < stg.day) - 1;
+      }
+
+      function getProgressBar(week) {
+        const list = Array.from(Array(40).keys())
+        const result = list.map((key) => (key + 1 < week) ? '=' : ' ');
+        result.push(']');
+        result.unshift('[');
+        return result.join('');
+      }
+
+
+      const daysSinceTransfer = fnDaysSince(TRANSFER_DATE);
+      const pregnancyWeek = fnDaysSince(LAST_PERIOD_DATE) / 7;
+      const babyAge = daysSinceTransfer + 6;
+      const babyStage = babyAge > 63 ? "Fetus" : "Embryo";
+      const currentStageIndex = getStageIndex(babyAge, STAGES);
+
+      const TEXT = `
+      Last Period Date: ${LAST_PERIOD_DATE.toDateString()}
+      Transfer Date: ${TRANSFER_DATE.toDateString()}
+      --
+      Days Since Transfer: ${daysSinceTransfer} days
+      ${babyStage} Age: ${babyAge} days
+      Gestational Week: ${pregnancyWeek.toFixed(2)} weeks / 40 weeks
+      ${getProgressBar(pregnancyWeek)} ${(pregnancyWeek / 40 * 100).toFixed(0)} %
+
+      Stage: ${STAGES[currentStageIndex].stage}
+      Source: https://www.youtube.com/watch?v=1zpV5rzWXMA
+      Estimated Birth: ${DUE_DATE.toDateString()}
+      `;
+
+      function Result() {
+        return <pre>{TEXT}</pre>
+      }
+
+      const container = document.getElementById('root');
+      const root = ReactDOM.createRoot(container);
+      root.render(<Result />);
+
+    </script>
+  </body>
+</html>
