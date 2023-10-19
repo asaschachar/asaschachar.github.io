@@ -50,6 +50,7 @@
       }
 
 
+      const gestationalDays = fnDaysSince(LAST_PERIOD_DATE);
       const daysSinceTransfer = fnDaysSince(TRANSFER_DATE);
       const pregnancyWeek = fnDaysSince(LAST_PERIOD_DATE) / 7;
       const babyAge = daysSinceTransfer + 6;
@@ -62,7 +63,7 @@
       --
       Days Since Transfer: ${daysSinceTransfer} days
       ${babyStage} Age: ${babyAge} days
-      Gestational Week: ${pregnancyWeek.toFixed(2)} weeks / 40 weeks
+      Gestational Week: ${pregnancyWeek.toFixed(2)} weeks / 40 weeks (${gestationalDays} days)
       ${getProgressBar(pregnancyWeek)} ${(pregnancyWeek / 40 * 100).toFixed(0)} %
 
       Stage: ${STAGES[currentStageIndex].stage}
