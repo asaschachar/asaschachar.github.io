@@ -66,7 +66,7 @@
       Gestational Week: ${pregnancyWeek.toFixed(2)} weeks / 40 weeks (${gestationalDays} days)
       ${getProgressBar(pregnancyWeek)} ${(pregnancyWeek / 40 * 100).toFixed(0)} %
 
-      Stage: ${STAGES[currentStageIndex].stage}
+      Stage: ${STAGES[currentStageIndex]?.stage}
       Source: https://www.youtube.com/watch?v=1zpV5rzWXMA
       Estimated Birth: ${DUE_DATE.toDateString()}
       `;
