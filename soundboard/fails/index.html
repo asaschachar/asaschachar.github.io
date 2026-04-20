@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asa Soundboard</title>
+    <title>Asa Soundboard — Fails</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100
-      100%22><text y=%22.9em%22 font-size=%2290%22>🎙</text></svg>">
+      100%22><text y=%22.9em%22 font-size=%2290%22>😢</text></svg>">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
@@ -20,46 +20,38 @@
     </style>
   </head>
   <body>
-    <div id="root"></div>
-    <div class="container mx-auto p-3 flex justify-center">
-      <a href="./fails/" class="bg-gray-200 hover:bg-gray-300 text-gray-800 text-sm py-2 px-4 rounded">
-        😢 Fail Sounds →
+    <div class="container mx-auto p-3">
+      <a href="../" class="inline-block bg-gray-200 hover:bg-gray-300 text-gray-800 text-sm py-2 px-4 rounded">
+        ← Back
       </a>
     </div>
+    <div id="root"></div>
     <div id="alternates" class="text-gray-300 flex justify-center">
       <a href="http://night-pimp.com/soundboard/" class="px-2">Dae-Ho's</a> ·
       <a href="https://www.myinstants.com/" class="px-2">MyInstants</a>
     </div>
     <script type="text/babel">
       const SOUND_BOARD = {
-        Jeopardy: [
+        Fails: [
           {
-            file: "https://www.myinstants.com/media/sounds/jeopardy-intro.mp3",
-            label: "📺 Intro",
+            file: "https://www.myinstants.com/media/sounds/the-price-is-right-losing-horn.mp3",
+            label: "📯 Price is Right",
           },
           {
-            file: "https://www.myinstants.com/media/sounds/jeopardy-outro-no-talking.mp3",
-            label: "🔚 Outro",
+            file: "https://www.myinstants.com/media/sounds/8d82b5_pacman_dies_sound_effect.mp3",
+            label: "👾 Pac-Man",
           },
           {
-            file: "https://www.myinstants.com/media/sounds/rightanswer.mp3",
-            label: "✅ Correct",
+            file: "https://www.myinstants.com/media/sounds/super-mario-death-sound-sound-effect.mp3",
+            label: "🍄 Mario",
           },
           {
-            file: "https://www.myinstants.com/media/sounds/times-up.mp3",
-            label: "❌ Incorrect",
+            file: "https://www.myinstants.com/media/sounds/erro.mp3",
+            label: "💻 Windows XP",
           },
           {
-            file: "https://www.myinstants.com/media/sounds/jeopardy-board.mp3",
-            label: "🟦 Board Fill",
-          },
-          {
-            file: "https://www.myinstants.com/media/sounds/jeopardy-theme-lowq.mp3",
-            label: "⏳ Waiting",
-          },
-          {
-            file: "https://www.myinstants.com/media/sounds/jeopardy-daily-double.mp3",
-            label: "💰 Double",
+            file: "https://www.myinstants.com/media/sounds/sadtrombone.swf.mp3",
+            label: "🎺 Sad Trombone",
           },
           {
             local: true,
@@ -132,15 +124,5 @@
       root.render(<Soundboard />);
 
     </script>
-    <!--
-      Note: this page is a great way to try React but it's not suitable for production.
-      It slowly compiles JSX with Babel in the browser and uses a large development build of React.
-
-      Read this page for starting a new React project with JSX:
-      https://react.dev/learn/start-a-new-react-project
-
-      Read this page for adding React with JSX to an existing project:
-      https://react.dev/learn/add-react-to-an-existing-project
-    -->
   </body>
 </html>
