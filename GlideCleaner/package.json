@@ -4,6 +4,6 @@
   "description": "ChordUp Landing Page",
   "author": "Asa Schachar",
   "dependencies": {
-    "optimizely-oui": "^31.4.0"
+    "optimizely-oui": "^31.12.4"
   }
 }
